@@ -1,0 +1,13 @@
+2019/09/22 10:54:07 [emerg] 1#1: no "events" section in configuration
+2019/09/22 10:54:23 [emerg] 1#1: no "events" section in configuration
+2019/09/22 10:55:28 [error] 6#6: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
+2019/09/22 10:55:28 [error] 6#6: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2019/09/22 10:55:43 [error] 6#6: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
+2019/09/22 10:55:44 [error] 6#6: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
+2019/09/22 10:55:44 [error] 6#6: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
+2019/09/22 10:55:56 [error] 6#6: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
+2019/09/22 10:57:11 [emerg] 1#1: host not found in upstream "web-php" in /etc/nginx/nginx.conf:39
+2019/09/22 10:59:00 [error] 6#6: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost:8080"
+2019/09/22 10:59:36 [error] 6#6: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost:8080"
+2019/09/22 11:01:30 [error] 6#6: *6 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost:8080"
+2019/09/22 11:01:36 [error] 6#6: *6 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost:8080"
