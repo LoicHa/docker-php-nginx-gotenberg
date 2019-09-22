@@ -1,16 +1,39 @@
-services:
-  web-nginx:
-    image: nginx:stable-alpine
-    container_name: web-nginx
-    volumes:
-      - "./www:/usr/share/nginx/html:ro"
-      - "./log:/var/log/nginx"
-      - "./conf/nginx.conf:/etc/nginx/nginx.conf:ro"
-    ports:
-      - "8080:80"
+version: '2'
 
-  web-php:
-    image: php:fpm-alpine
-    container_name: web-php
+#
+# Services definition
+#
+services:
+  nginx:
+    image: ${PROJECT_NAMESPACE}/${REPOSITORY_NAME}-nginx:latest
+    ports:
+      - "80:80"
     volumes:
-      - "./www:/script:ro"
+      - ./app:/var/www
+      - ./sites:/etc/nginx/conf.d
+    networks:
+      - backend
+    depends_on:
+      - php
+  php:
+    image: ${PROJECT_NAMESPACE}/${REPOSITORY_NAME}-php:latest
+    env_file: .env
+    volumes:
+      - ./app:/var/www
+    networks:
+      - backend
+
+
+#
+# Volumes definition
+#
+volumes:  
+  data-mysql:
+    driver: local
+
+#
+# Networks definition
+#
+networks:
+  backend:
+    driver: bridge

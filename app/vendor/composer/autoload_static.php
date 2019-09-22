@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8b5d756721b9e293eaa6c28043c2ef26
+class ComposerStaticInit17238805c6c7f3c57829233a5f9d14b3
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -12,7 +12,6 @@ class ComposerStaticInit8b5d756721b9e293eaa6c28043c2ef26
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '9c67151ae59aff4788964ce8eb2a0f43' => __DIR__ . '/..' . '/clue/stream-filter/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
         '3f648889e687f31c52f949ba8a9d0873' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/apache.php',
         'eab5d259bc3aff0bc10e38f403600cce' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/apc.php',
         'eeb4581d958421a4244aaa4167c6a575' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/apcu.php',
@@ -100,6 +99,7 @@ class ComposerStaticInit8b5d756721b9e293eaa6c28043c2ef26
         'fe43ca06499ac37bc2dedd823af71eb5' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/zip.php',
         '356736db98a6834f0a886b8d509b0ecd' => __DIR__ . '/..' . '/thecodingmachine/safe/generated/zlib.php',
         '72243e5536b63e298acb6476f01f1aff' => __DIR__ . '/..' . '/thecodingmachine/safe/lib/special_cases.php',
+        '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -160,8 +160,8 @@ class ComposerStaticInit8b5d756721b9e293eaa6c28043c2ef26
         ),
         'Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-http/message/src',
-            1 => __DIR__ . '/..' . '/php-http/message-factory/src',
+            0 => __DIR__ . '/..' . '/php-http/message-factory/src',
+            1 => __DIR__ . '/..' . '/php-http/message/src',
         ),
         'Http\\Discovery\\' => 
         array (
@@ -196,8 +196,8 @@ class ComposerStaticInit8b5d756721b9e293eaa6c28043c2ef26
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8b5d756721b9e293eaa6c28043c2ef26::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8b5d756721b9e293eaa6c28043c2ef26::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit17238805c6c7f3c57829233a5f9d14b3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit17238805c6c7f3c57829233a5f9d14b3::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
