@@ -1,6 +1,4 @@
 FROM php:fpm-alpine
-
-COPY composer.* ./
-RUN composer install --no-autoloader
-COPY . ./
-RUN composer dump-autoload
+RUN apk update && apk add --no-cache \
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN composer --version
